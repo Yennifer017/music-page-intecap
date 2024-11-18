@@ -12,7 +12,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Musica</a>
+            <a class="navbar-brand" href="#" onclick="loadPage('home')">
+                Musica
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -21,16 +23,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Historia</a>
+                        <a class="nav-link active" aria-current="page" href="#" onclick="loadPage('login')">
+                            Ingresar
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Artistas</a>
+                        <a class="nav-link active" aria-current="page" href="#" onclick="loadPage('historiaMusica')">
+                            Historia
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Instrumentos</a>
+                        <a class="nav-link active" aria-current="page" href="#" onclick="loadPage('artistas')">
+                            Artistas
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Test :)</a>
+                        <a class="nav-link active" aria-current="page" href="#" onclick="loadPage('instrumentos')">
+                            Instrumentos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="loadPage('quiz')">
+                            Test :)
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -38,8 +53,16 @@
                             Nosotros
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Contacto</a></li>
-                            <li><a class="dropdown-item" href="#">Politica de privacidad</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="loadPage('contacto')">
+                                Contacto
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="loadPage('privacityPolice')">
+                                    Politica de privacidad
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -47,10 +70,9 @@
         </div>
     </nav>
 
-    <main id="main-content">
+    <main id="content">
 
     </main>
-
 
     <script src="./assets/js/main.js"></script>
     <footer class="bg-dark text-white text-center py-3 mt-5">
