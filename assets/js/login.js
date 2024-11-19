@@ -20,7 +20,7 @@ async function generateSHA256Hash(message) {
     return hashHex;
 }
 
-document.getElementById("loginForm").addEventListener("submit", async function(event) {
+async function loginService(event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -35,9 +35,14 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         messageElement.textContent = "Usuario o contraseña inválido.";
         messageElement.style.color = "red";
     }
+}
+
+document.body.addEventListener("change", function(event) {
+    if (event.target && event.target.id === "showPassword") {
+        const passwordField = document.getElementById("password");
+        if (passwordField) {
+            passwordField.type = event.target.checked ? "text" : "password";
+        }
+    }
 });
 
-document.getElementById("showPassword").addEventListener("change", function() {
-    const passwordField = document.getElementById("password");
-    passwordField.type = this.checked ? "text" : "password"; 
-});

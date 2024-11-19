@@ -1,4 +1,4 @@
-const QuizResults = [
+const quizResults = [
     {
         title: "Eres un alma clásica con un toque rebelde",
         content: `Te encanta mantenerte conectado con lo auténtico y valorar la profundidad en las cosas. 
@@ -32,15 +32,73 @@ const QuizResults = [
 ];
 
 function processPersonalityQuiz(event){
+    const resultElement = document.getElementById('resultQuiz');
     event.preventDefault();
-    // Capturar las respuestas seleccionadas
-    let selections = [];
+    let selections = [0, 0, 0, 0];
+    let errorMss = [];
     for (let i = 0; i < 7; i++) {
         const selectedOption = document.querySelector(`input[name="selection[${i}]"]:checked`);
         if(selectedOption){
-            
+            switch(selectedOption.value){
+                case '0':
+                    selections[0] ++;
+                    break;
+                case '1':
+                    selections[1] ++;
+                    break;
+                case '2':
+                    selections[2] ++;
+                    break;
+                case '3':
+                    selections[3] ++;
+                    break;
+            }
         } else {
-
+            errorMss.push('No se selecciono ninguna opcion en la pregunta ' + (i+1));
         }
     }
+    if(errorMss.length !== 0){
+        errorMss.forEach((element) => 
+            resultElement.innerHTML += 
+                `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    ${element}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`
+        );
+    } else {
+        console.log(selections);
+        let indexes = getMaxIndexElement(selections);
+        let responseIndex = indexes.length == 1 ? indexes[0] : 4;
+        resultElement.innerHTML += 
+            `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">${quizResults[responseIndex].title}</h4> 
+                <hr>
+                <p>${quizResults[responseIndex].content}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>`;
+    }
+    const firstElement = document.getElementById('quiz-section');
+    firstElement.scrollIntoView({ behavior: 'smooth' });
+}
+
+function getMaxIndexElement(array){
+    let indexes = [0];
+    let maxIndex = 0;
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > array[maxIndex]) {
+            maxIndex = i;
+            indexes = [];
+            indexes.push(maxIndex);
+        } else if(array[i] == array[maxIndex]){
+            indexes.push(i)
+        }
+    }
+    console.log("indexes:");
+    console.log(indexes);
+    return indexes;
+}
+
+function resetQuizForm(){
+    const quizForm = document.getElementById("musicQuizForm");
+    quizForm.reset();
 }
