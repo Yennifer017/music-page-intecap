@@ -1,0 +1,454 @@
+<section class="my-5" id="quiz-section">
+    <div class="container">
+        <h1 class="text-center mb-4">Music Quiz</h1>
+        <p class="text-center">Descubre como es tu personalidad segun la musica que escuchas. Completa el siguiente quiz!</p>
+        <form id="musicQuizForm" method="post" onsubmit="return processPersonalityQuiz(event);">
+            <!-- Question 1 -->
+            <div class="card mb-5">
+                <div class="card-header bg-secondary text-light text-center">
+                    <h5>1. ¿Cuál es tu género favorito?</h5>
+                </div>
+                <div class="card-body bg-dark text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/811838/pexels-photo-811838.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rock</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[0]" value="0" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/442540/pexels-photo-442540.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pop</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[0]" value="1" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/733767/pexels-photo-733767.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jazz</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[0]" value="2" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/210854/pexels-photo-210854.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Classical</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[0]" value="3" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="card mb-5">
+                <div class="card-header bg-secondary text-light text-center">
+                    <h5>2. ¿Qué instrumento prefieres?</h5>
+                </div>
+                <div class="card-body bg-dark text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Guitarra</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[1]" value="0" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Piano</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[1]" value="1" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/995301/pexels-photo-995301.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Batería</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[1]" value="2" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/3120109/pexels-photo-3120109.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Violín</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[1]" value="3" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="card mb-5">
+                <div class="card-header bg-secondary text-light text-center">
+                    <h5>3. ¿Qué década musical te atrae más?</h5>
+                </div>
+                <div class="card-body bg-dark text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/159613/ghettoblaster-radio-recorder-boombox-old-school-159613.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">80's</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[2]" value="0" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/1345630/pexels-photo-1345630.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">90's</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[2]" value="1" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/8368710/pexels-photo-8368710.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">2000's</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[2]" value="2" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/983831/pexels-photo-983831.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">2010's</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[2]" value="3" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="card mb-5">
+                <div class="card-header bg-secondary text-light text-center">
+                    <h5>4. ¿Qué te inspira al escuchar música?</h5>
+                </div>
+                <div class="card-body bg-dark text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/51343/old-letters-old-letter-handwriting-51343.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">La letra</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[3]" value="0" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">La melodia</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[3]" value="1" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/1093161/pexels-photo-1093161.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">El ritmo</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[3]" value="2" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">La emocion</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[3]" value="3" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="card mb-5">
+                <div class="card-header bg-secondary text-light text-center">
+                    <h5>5. ¿Cuál de estos artistas te atrae más?</h5>
+                </div>
+                <div class="card-body bg-dark text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/The_Beatles_members_at_New_York_City_in_1964.jpg/413px-The_Beatles_members_at_New_York_City_in_1964.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Beatles</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[4]" value="0" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2847_of_118%29_%2852946286530%29_%28cropped%29.jpg/800px-Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2847_of_118%29_%2852946286530%29_%28cropped%29.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beyoncé</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[4]" value="1" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Michael_Jackson_in_1988_%28enhanced%29_%28cropped%29.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Michael Jackson</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[4]" value="2" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Taylor_Swift_at_the_Golden_Globes_2024_%28Enhanced%2C_cropped%29.jpg/800px-Taylor_Swift_at_the_Golden_Globes_2024_%28Enhanced%2C_cropped%29.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Taylor Swift</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[4]" value="3" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="card mb-5">
+                <div class="card-header bg-secondary text-light text-center">
+                    <h5>6. ¿Dónde prefieres escuchar música?</h5>
+                </div>
+                <div class="card-body bg-dark text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">En un concierto</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[5]" value="0" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/4049984/pexels-photo-4049984.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">En casa</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[5]" value="1" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/4498179/pexels-photo-4498179.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">En el gimnasio</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[5]" value="2" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/4429515/pexels-photo-4429515.jpeg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">En el coche</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[5]" value="3" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="card mb-5">
+                <div class="card-header bg-secondary text-light text-center">
+                    <h5>7. ¿Cuál es tu propósito principal al escuchar música?</h5>
+                </div>
+                <div class="card-body bg-dark text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://cdn.pixabay.com/photo/2020/02/09/09/39/smiley-4832495_1280.png"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Relajarme</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[6]" value="0" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://cdn.pixabay.com/photo/2016/08/21/19/27/emoticon-1610573_1280.png"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Motivarme</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[6]" value="1" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://cdn.pixabay.com/photo/2016/08/21/18/48/emoticon-1610518_1280.png"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Divertirme</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[6]" value="2" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://cdn.pixabay.com/photo/2016/08/29/11/55/emoticon-1628080_1280.png"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Concentrarme</h5>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selection[6]" value="3" class="btn-check" autocomplete="off">
+                                        <span class="btn btn-primary">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success">
+                    Enviar Respuestas
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

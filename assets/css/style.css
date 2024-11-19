@@ -1,0 +1,9 @@
+#musicCarousel img{
+    object-fit: cover;
+    height: 700px;
+    width: 100%;
+}
+#quiz-section img{
+    object-fit: cover;
+    height: 200px;
+}
