@@ -32,6 +32,7 @@ const quizResults = [
 ];
 
 function processPersonalityQuiz(event){
+    console.log('form do something!');
     const resultElement = document.getElementById('resultQuiz');
     event.preventDefault();
     let selections = [0, 0, 0, 0];
@@ -99,6 +100,7 @@ function getMaxIndexElement(array){
 }
 
 function resetQuizForm(){
+    console.log('reset quiz');
     const quizForm = document.getElementById("musicQuizForm");
     quizForm.reset();
 }
